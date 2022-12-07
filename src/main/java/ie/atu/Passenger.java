@@ -14,4 +14,24 @@ public class Passenger {
         this.passengerPhone = passengerPhone;
         this.passengerAge = passengerAge;
     }
+
+    public String getPassengerTitle() {
+        return passengerTitle;
+    }
+
+    public String getPassengerName() {
+        return passengerName;
+    }
+
+    public long getPassengerId() {
+        return passengerId;
+    }
+
+    public long getPassengerPhone() {
+        return passengerPhone;
+    }
+
+    public int getPassengerAge() {
+        return passengerAge;
+    }
 }
