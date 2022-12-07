@@ -81,4 +81,8 @@ public class Passenger {
         }
 
     }
+
+    public static void main(String[] args) {
+        System.out.println("Docker is running this project");
+    }
 }
