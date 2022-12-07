@@ -10,30 +10,30 @@ public class PassengerFailTests {
     @Test
     void testTitleFail(){
         Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger("Mister", "Allyn", 12343, 87715580, 21);});
-        assertEquals("Invalid title", exMessage.getMessage());
+        assertEquals("Title must be Mr, Mrs, or Ms", exMessage.getMessage());
     }
 
     @Test
     void testNameFail(){
         Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger("Mr", "Al", 12343, 87715580, 21);});
-        assertEquals("Invalid name", exMessage.getMessage());
+        assertEquals("Name must have at least 3 characters", exMessage.getMessage());
     }
 
     @Test
     void testIdFail(){
         Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger("Mr", "Allyn", -12343, 87715580, 21);});
-        assertEquals("Invalid id", exMessage.getMessage());
+        assertEquals("Id must be a positive integer", exMessage.getMessage());
     }
 
     @Test
     void testFail(){
         Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger("Mr", "Allyn", 12343, 877155890, 21);});
-        assertEquals("Invalid phone no", exMessage.getMessage());
+        assertEquals("Phone number must have 8 digits", exMessage.getMessage());
     }
 
     @Test
     void testAgeFail(){
         Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger("Mr", "Allyn", 12343, 87715580, 2);});
-        assertEquals("Invalid age", exMessage.getMessage());
+        assertEquals("Passenger must be at least 16 years old", exMessage.getMessage());
     }
 }
