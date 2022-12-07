@@ -7,12 +7,12 @@ public class Passenger {
     private long passengerPhone;
     private int passengerAge;
 
-    public Passenger(String passengerTitle, String passengerName, long passengerId, long passengerPhone, int passengerAge) {
-        this.passengerTitle = passengerTitle;
-        this.passengerName = passengerName;
-        this.passengerId = passengerId;
-        this.passengerPhone = passengerPhone;
-        this.passengerAge = passengerAge;
+    public Passenger(String passengerTitle1, String passengerName1, long passengerId1, long passengerPhone1, int passengerAge1) {
+        setPassengerTitle(passengerTitle1);
+        setPassengerName(passengerName1);
+        setPassengerId(passengerId1);
+        setPassengerPhone(passengerPhone1);
+        setPassengerAge(passengerAge1);
     }
 
     public String getPassengerTitle() {
@@ -46,13 +46,12 @@ public class Passenger {
     }
 
     public void setPassengerName(String passengerName) {
-        if (passengerTitle.length() >= 3) {
+        if (passengerName.length() >= 3) {
             this.passengerName = passengerName;
         }
         else{
             throw new IllegalArgumentException("Name must have at least 3 characters");
         }
-
     }
 
     public void setPassengerId(long passengerId) {

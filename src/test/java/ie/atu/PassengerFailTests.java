@@ -9,7 +9,7 @@ public class PassengerFailTests {
 
     @Test
     void testTitleFail(){
-        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger("Mister", "Allyn", 12343, 87715580, 21);});
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> new Passenger("Mister", "Allyn", 12343, 87715580, 21));
         assertEquals("Title must be Mr, Mrs, or Ms", exMessage.getMessage());
     }
 
